@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone') {
-            steps {
-                 git 'https://github.com/yogeesh77/jenkins.git'
-            }
-        }
         stage('Build') {
             steps {
                 echo "Building the project..."
@@ -21,5 +16,3 @@ pipeline {
                 echo "Deploying application..."
             }
         }
-    }
-}
